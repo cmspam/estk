@@ -16,15 +16,12 @@
     h1, h2 {
       color: #333;
     }
-    img {
-      max-width: 100%;
+    img.thumbnail {
+      max-width: 200px;
       height: auto;
-      margin: 20px 0;
-    }
-    code {
-      background-color: #eee;
-      padding: 2px 4px;
+      border: 1px solid #ccc;
       border-radius: 4px;
+      margin-top: 10px;
     }
     .note {
       background-color: #fff3cd;
@@ -32,11 +29,34 @@
       padding: 10px;
       margin: 20px 0;
     }
+    .image-section {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 1em;
+    }
   </style>
 </head>
 <body>
 
   <h1>ESTK.ME 物理的ESIMカード取扱説明書</h1>
+
+  <p>
+    ESTK.ME物理的eSIMカードは、<strong>複数のeSIMプロファイルを保存・切替可能な特殊なSIMカード</strong>です。
+    通常のSIMカードのようにデバイスに差し込みますが、内容はユーザー自身で書き換えることができます。
+  </p>
+
+  <p>
+    eSIMプロファイルは、<strong>携帯電話キャリアから提供されたQRコードまたは情報</strong>を使用して、
+    専用のアプリを通じてダウンロード・インストールします。
+  </p>
+
+  <p>
+    最初のeSIMプロファイルは、Android用の専用アプリを使用してインストールする必要があります。
+    一度有効なeSIMが設定されると、その後は<strong>AndroidやiPhoneの内蔵機能</strong>を使用して、
+    新しいプロファイルの追加や切り替えが可能です。
+  </p>
 
   <h2>Androidの場合：</h2>
   <ol>
@@ -48,9 +68,15 @@
       アプリを開き、右上の「+」ボタンをタップして新しいeSIMプロファイルを追加します。
     </li>
     <li>
-      指示に従って、QRコードをスキャンするか、必要な情報を手動で入力してeSIMプロファイルを有効化してください。
+      指示に従って、必要な情報を手動で入力してeSIMプロファイルを有効化してください。
     </li>
   </ol>
+
+  <div class="image-section">
+    <a href="https://docs.estk.me/manual/download/easyeuicc/04.png" target="_blank">
+      <img src="https://docs.estk.me/manual/download/easyeuicc/04.png" alt="EasyEUICCの使い方" class="thumbnail">
+    </a>
+  </div>
 
   <div class="note">
     注意：最初のeSIMプロファイルの有効化には<strong>Android端末が必要</strong>です。<br>
@@ -71,15 +97,16 @@
         <li>「設定（Settings）」を開く</li>
         <li>「Cloud Enhance」を選択</li>
         <li>「Enabled」を選び、「Accept」を2回タップ</li>
-        <li>「Download」を選び、QRコードの内容（テキスト）を入力</li>
+        <li>「Download」を選び、eSIMプロファイルの情報を入力</li>
       </ul>
-    </li>
-    <li>
-      QRコードのテキストは、下の画像を使ってオンラインツールで取得できます。
     </li>
   </ol>
 
-  <img src="qr.png" alt="QRコード">
+  <div class="image-section">
+    <a href="https://docs.estk.me/manual/download/cloud-enhance/05.png?height=35vh&classes=inline" target="_blank">
+      <img src="https://docs.estk.me/manual/download/cloud-enhance/05.png?height=35vh&classes=inline" alt="iPhone Cloud Enhanceの画面" class="thumbnail">
+    </a>
+  </div>
 
   <div class="note">
     有効で接続中のeSIMがある場合、新しいeSIMプロファイルを正常にダウンロードできます。
