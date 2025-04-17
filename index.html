@@ -92,15 +92,37 @@
       プロファイルを切り替えるには、<code>Profiles</code>（英語表記）から希望のプロファイルを選択します。
     </li>
     <li>
-      新しいプロファイルを追加するには：
+      新しいプロファイルを追加するには、以下の手順に従ってください：
       <ul>
         <li>「設定（Settings）」を開く</li>
         <li>「Cloud Enhance」を選択</li>
         <li>「Enabled」を選び、「Accept」を2回タップ</li>
-        <li>「Download」を選び、eSIMプロファイルの情報を入力</li>
+        <li>「Download」を選び、eSIMプロファイルの情報（Activation Code）を入力</li>
       </ul>
     </li>
   </ol>
+
+  <div class="note">
+    <strong>Activation Code（AC）とは？</strong><br>
+    Activation Codeは、携帯キャリアから提供されるeSIMプロファイルを有効化するための文字列で、
+    SGP.22という仕様で定義されています。<br>
+    通常、<code>LPA:1$</code> または <code>1$</code> で始まり、
+    <code>SM-DPアドレス</code> と <code>MATCHING ID</code> が <code>$</code> で区切られています。
+    
+    <br><br>
+    例：
+    <pre>
+LPA:1$SMDP.GSMA.COM$04386-AGYFT-A74Y8-3F815
+1$SMDP.GSMA.COM$04386-AGYFT-A74Y8-3F815
+    </pre>
+
+    <strong>ACの取得方法：</strong><br>
+    キャリアがQRコードを提供している場合、そのQRコードの内容がActivation Codeです。
+    QRコード読み取りアプリでスキャンして文字列を確認できます。<br>
+    一部のキャリアは、SM-DPアドレスとMATCHING IDを個別に提供することもありますが、
+    それらを <code>LPA:1$SM-DP_ADDRESS$MATCHING_ID</code> の形式で自分で組み立てることも可能です。<br>
+    また、ダウンロード時に確認コード（Confirmation Code）が必要になる場合もあります。
+  </div>
 
   <div class="image-section">
     <a href="https://docs.estk.me/manual/download/cloud-enhance/05.png?height=35vh&classes=inline" target="_blank">
